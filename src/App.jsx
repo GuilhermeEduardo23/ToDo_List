@@ -39,12 +39,23 @@ function App() {
     setTodos(newTodos);
   };
 
+  const removeTodo = (id) => {
+  //Criando um novo array de todos, e preservando o original
+   const newTodos = [...todos];
+
+   //Filtrando o array de todos, criando um novo array sem os todos removidos
+   const filteredTodos = newTodos.filter(todo => todo.id !== id ? todo : null);
+
+   //Atualizando o estado de todos com o novo array
+   setTodos(filteredTodos);
+  }
+
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
       <div className="todo_list">
         {todos.map(todo => (
-          <Todo key={todo.id} todo={todo}/>
+          <Todo key={todo.id} todo={todo} removeTodo={removeTodo}/>
         ))}
       </div>
       <TodoForm addTodo={addTodo}/>
