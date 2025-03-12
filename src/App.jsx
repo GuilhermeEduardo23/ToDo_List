@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.scss";
 import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
+import Search from "./components/Search";
 
 function App() {
   const date = new Date();
@@ -25,6 +26,8 @@ function App() {
       isCompleted: true,
     },
   ]);
+
+  const [search, setSearch] = useState("");
 
   const addTodo = (text, category) => {
     const newTodos = [
@@ -65,8 +68,9 @@ function App() {
         <h1>Lista de Tarefas</h1>
         <span className="date">{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</span>
       </div>
+      <Search search={search} setSearch={setSearch}/>
       <div className="todo_list">
-        {todos.map(todo => (
+        {todos.filter(todo => todo.text.toLowerCase().includes(search.toLowerCase())).map(todo => (
           <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo}/>
         ))}
       </div>
