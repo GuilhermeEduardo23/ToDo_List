@@ -8,10 +8,7 @@
 body {
   padding: 30px;
   color: #333;
-  background-image: url("./img/BgImage.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: red;
 }
 
 .app {
@@ -45,6 +42,22 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+  }
+
+  .filter, .search {
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    .filter_options {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+
+      div {
+        flex: 1 1 0;
+      }
+    }
   }
 }
 
@@ -99,3 +112,4 @@ input, select {
   border-radius: 3px;
   width: 100%;
 }
+
