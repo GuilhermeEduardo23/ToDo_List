@@ -3,9 +3,9 @@ import "./App.scss";
 import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
 import Search from "./components/Search";
+import FormattedDate from "./components/Date";
 
 function App() {
-  const date = new Date();
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -66,7 +66,7 @@ function App() {
     <div className="app">
       <div className="description">
         <h1>Lista de Tarefas</h1>
-        <span className="date">{`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`}</span>
+        <FormattedDate />
       </div>
       <Search search={search} setSearch={setSearch}/>
       <div className="todo_list">
