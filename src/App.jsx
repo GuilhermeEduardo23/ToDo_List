@@ -7,26 +7,7 @@ import FormattedDate from "./components/Date";
 import Filter from "./components/Filter";
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: "Criar funcionalidade X no sistema",
-      category: "Trabalho",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      text: "Ir para a academia",
-      category: "Pessoal",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      text: "Estudar React",
-      category: "Estudos",
-      isCompleted: true,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const [search, setSearch] = useState("");
 
