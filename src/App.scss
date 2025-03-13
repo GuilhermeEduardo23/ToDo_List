@@ -2,19 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   padding: 30px;
   color: #333;
-  background-color: red;
+  background-image: linear-gradient(
+    to bottom right,
+    #3674B5 0%, #578FCA 20%, #A1E3F9 35%
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s linear infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  from {background-position: 0 0};
+  to {background-position: 100% 100%};
 }
 
 .app {
   max-width: 600px;
   margin: 0 auto 300px;
-  background-color: #efefef;
+  background-color: #efefefc7;
   padding: 20px 30px;
   border-radius: 10px;
 
