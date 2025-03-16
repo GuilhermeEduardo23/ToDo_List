@@ -5,6 +5,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@import url('./Responsive.scss');
+
 body {
   padding: 30px;
   color: #333;
@@ -67,7 +69,6 @@ body {
     .filter_options {
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
 
       div {
         flex: 1 1 0;

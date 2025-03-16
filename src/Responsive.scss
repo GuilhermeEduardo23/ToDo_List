@@ -1,0 +1,27 @@
+@media screen and (max-width: 450px) {
+    body {
+        text-align: center;
+    }
+
+    .todo {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .filter_options {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 427px) {
+    .filter_options {
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .filter_options {
+        gap: 3rem;
+    }
+}
