@@ -33,6 +33,11 @@ body {
     padding-bottom: 20px;
     border-bottom: 1px solid #555;
     margin-top: 10px;
+
+    .warning {
+      margin-bottom: 0;
+      text-align: center;
+    }
   }
 
   .todo {
@@ -122,4 +127,3 @@ input, select {
   border-radius: 3px;
   width: 100%;
 }
-
